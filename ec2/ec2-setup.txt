@@ -1,14 +1,6 @@
 #!/bin/bash
-If [ -e $filename ]
-Then
-     echo "file exist"
-else
-     echo "file doesn't exist"
-
+rm springboot-apis-1.0.jar -f
 sudo dnf update
-sudo dnf install java-17-amazon-corretto-devel
-java -version
-
-wget https://taragati-labs.s3.ap-southeast-2.amazonaws.com/artefacts.zip
-unzip artefacts.zip
-java -jar springboot-apis-1.0.jar
+sudo dnf install java-17-amazon-corretto-devel -y
+wget https://github.com/taragati/aws-lab-artefacts/raw/refs/heads/main/ec2/springboot-apis-1.0.jar
+java -jar springboot-apis-1.0.jar -Dversion=v1 &
