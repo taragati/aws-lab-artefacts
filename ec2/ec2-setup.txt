@@ -1,6 +1,9 @@
 #!/bin/bash
-rm springboot-apis-1.0.jar -f
+sudo rm springboot-apis-1.0.jar -f
+if pids=$(sudo lsof -i:8080 -t); then
+    sudo kill $pids
+fi
 sudo dnf update
 sudo dnf install java-17-amazon-corretto-devel -y
-wget https://github.com/taragati/aws-lab-artefacts/raw/refs/heads/main/ec2/springboot-apis-1.0.jar
-java -jar springboot-apis-1.0.jar -Dversion=v1 &
+sudo wget https://github.com/taragati/aws-lab-artefacts/raw/refs/heads/main/ec2/springboot-apis-1.0.jar
+sudo java -jar springboot-apis-1.0.jar -Dversion=v1 &
