@@ -178,10 +178,10 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "https://2sieayiow5fbuqlvfkbtnojq5e0jmcoi.lambda-url.ap-south-1.on.aws/apis/resource/9658dc74-c6f2-41f8-91a2-efa38013fa4f",
+									"raw": "https://vrywsv6maprlbz7tstjno2ehg40mwrdk.lambda-url.ap-south-1.on.aws/apis/resource/8d53eedc-2c91-45d7-bd43-301a3b1773ae",
 									"protocol": "https",
 									"host": [
-										"2sieayiow5fbuqlvfkbtnojq5e0jmcoi",
+										"vrywsv6maprlbz7tstjno2ehg40mwrdk",
 										"lambda-url",
 										"ap-south-1",
 										"on",
@@ -190,7 +190,7 @@
 									"path": [
 										"apis",
 										"resource",
-										"9658dc74-c6f2-41f8-91a2-efa38013fa4f"
+										"8d53eedc-2c91-45d7-bd43-301a3b1773ae"
 									]
 								}
 							},

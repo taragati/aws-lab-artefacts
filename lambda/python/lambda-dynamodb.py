@@ -6,10 +6,14 @@ def lambda_handler(event, context):
     dynamodb = boto3.client('dynamodb')
     table_name = 'MYAPIS_TABLE'
 
-    method = event['requestContext']['http']['method']
-    path = event['requestContext']['http']['path']
+    if 'http' in event['requestContext']:
+        method = event['requestContext']['http']['method']
+        path = event['requestContext']['http']['path']
+    else:
+        method = event['httpMethod']
+        path = event['path']
 
-    if "/apis/resource" in path and method == 'GET':
+    if "/resource" in path and method == 'GET':
         # Example: Get all items from the table
         parts = path.split("/")
         response = dynamodb.get_item(
@@ -21,7 +25,7 @@ def lambda_handler(event, context):
         )
         response = response['Item']
         response['version'] = 'v1'
-    elif "/apis/resource" in path and method == 'POST':
+    elif "/resource" in path and method == 'POST':
         object_key = str(uuid.uuid4())
         # Example: Insert an item into the table
         body = json.loads(event['body'])
