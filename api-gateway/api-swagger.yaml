@@ -2,7 +2,7 @@ openapi: 3.0.3
 info:
   title: Person - OpenAPI 3.0
   description: >-
-    This is swagger spec for Assessment APIs
+    This is swagger spec for example APIs
   version: 0.0.3
 servers:
   - url: https://api.example.com/api/v1
@@ -11,8 +11,7 @@ tags:
     description: CORS - API
   - name: Person
     description: >-
-      Institute apis, for security reasons, institute id is NOT allowed in the
-      request path, it is taken from session cache in the backend
+      Person APIs
 paths:
   /resource:
     options:
