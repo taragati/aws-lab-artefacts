@@ -1,0 +1,204 @@
+{
+	"info": {
+		"_postman_id": "757b4555-8b82-4088-969f-7feb8af52058",
+		"name": "Cloud Labs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3192497"
+	},
+	"item": [
+		{
+			"name": "my-apis",
+			"item": [
+				{
+					"name": "elb",
+					"item": [
+						{
+							"name": "countries",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "F8P6JOupz39PMPYhvpP1Q8HEjIXzwcF6qvml7KQ7",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "X-Api-Key",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://13.234.111.2:8080/apis/countries",
+									"protocol": "http",
+									"host": [
+										"13",
+										"234",
+										"111",
+										"2"
+									],
+									"port": "8080",
+									"path": [
+										"apis",
+										"countries"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "health",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://ec2-13-234-111-2.ap-south-1.compute.amazonaws.com:8080/apis/health",
+									"protocol": "http",
+									"host": [
+										"ec2-13-234-111-2",
+										"ap-south-1",
+										"compute",
+										"amazonaws",
+										"com"
+									],
+									"port": "8080",
+									"path": [
+										"apis",
+										"health"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "api-gw",
+					"item": [
+						{
+							"name": "resource",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"role\":\"Admin\",\n    \"title\":\"Niranjan\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://2sieayiow5fbuqlvfkbtnojq5e0jmcoi.lambda-url.ap-south-1.on.aws/apis/resource",
+									"protocol": "https",
+									"host": [
+										"2sieayiow5fbuqlvfkbtnojq5e0jmcoi",
+										"lambda-url",
+										"ap-south-1",
+										"on",
+										"aws"
+									],
+									"path": [
+										"apis",
+										"resource"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "resource",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://2sieayiow5fbuqlvfkbtnojq5e0jmcoi.lambda-url.ap-south-1.on.aws/apis/resource/9658dc74-c6f2-41f8-91a2-efa38013fa4f",
+									"protocol": "https",
+									"host": [
+										"2sieayiow5fbuqlvfkbtnojq5e0jmcoi",
+										"lambda-url",
+										"ap-south-1",
+										"on",
+										"aws"
+									],
+									"path": [
+										"apis",
+										"resource",
+										"9658dc74-c6f2-41f8-91a2-efa38013fa4f"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "lambda",
+					"item": [
+						{
+							"name": "resource",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"role\":\"Admin\",\n    \"title\":\"Niranjan\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://5fztsnivvlq6yjwv2mohchri6i0kvyvl.lambda-url.ap-south-1.on.aws/apis/resource",
+									"protocol": "https",
+									"host": [
+										"5fztsnivvlq6yjwv2mohchri6i0kvyvl",
+										"lambda-url",
+										"ap-south-1",
+										"on",
+										"aws"
+									],
+									"path": [
+										"apis",
+										"resource"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "resource",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://2sieayiow5fbuqlvfkbtnojq5e0jmcoi.lambda-url.ap-south-1.on.aws/apis/resource/9658dc74-c6f2-41f8-91a2-efa38013fa4f",
+									"protocol": "https",
+									"host": [
+										"2sieayiow5fbuqlvfkbtnojq5e0jmcoi",
+										"lambda-url",
+										"ap-south-1",
+										"on",
+										"aws"
+									],
+									"path": [
+										"apis",
+										"resource",
+										"9658dc74-c6f2-41f8-91a2-efa38013fa4f"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
