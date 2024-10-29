@@ -1,0 +1,165 @@
+{
+  "Comment": "A description of my state machine",
+  "StartAt": "Parallel",
+  "States": {
+    "Parallel": {
+      "Type": "Parallel",
+      "Branches": [
+        {
+          "StartAt": "Cheque-File-Processing",
+          "States": {
+            "Cheque-File-Processing": {
+              "Type": "Map",
+              "ItemProcessor": {
+                "ProcessorConfig": {
+                  "Mode": "DISTRIBUTED",
+                  "ExecutionType": "STANDARD"
+                },
+                "StartAt": "Extract-Cheque-Data",
+                "States": {
+                  "Extract-Cheque-Data": {
+                    "Type": "Task",
+                    "Resource": "arn:aws:states:::lambda:invoke",
+                    "OutputPath": "$.Payload",
+                    "Parameters": {
+                      "FunctionName": "arn:aws:lambda:ap-south-1:654654461052:function:Extract-Cheque-Data:$LATEST",
+                      "Payload.$": "$"
+                    },
+                    "Retry": [
+                      {
+                        "ErrorEquals": [
+                          "Lambda.ServiceException",
+                          "Lambda.AWSLambdaException",
+                          "Lambda.SdkClientException",
+                          "Lambda.TooManyRequestsException"
+                        ],
+                        "IntervalSeconds": 1,
+                        "MaxAttempts": 3,
+                        "BackoffRate": 2
+                      }
+                    ],
+                    "End": true
+                  }
+                }
+              },
+              "ItemReader": {
+                "Resource": "arn:aws:states:::s3:getObject",
+                "ReaderConfig": {
+                  "InputType": "CSV",
+                  "CSVHeaderLocation": "FIRST_ROW"
+                },
+                "Parameters": {
+                  "Bucket": "niranjan-ftp-location",
+                  "Key": "ftp-location/Sample_Cheque_Data.csv"
+                }
+              },
+              "Label": "Cheque-File-Processing",
+              "End": true
+            }
+          }
+        },
+        {
+          "StartAt": "Bank-File-Processing",
+          "States": {
+            "Bank-File-Processing": {
+              "Type": "Map",
+              "ItemProcessor": {
+                "ProcessorConfig": {
+                  "Mode": "DISTRIBUTED",
+                  "ExecutionType": "STANDARD"
+                },
+                "StartAt": "Extract-Bank-Data",
+                "States": {
+                  "Extract-Bank-Data": {
+                    "Type": "Task",
+                    "Resource": "arn:aws:states:::lambda:invoke",
+                    "OutputPath": "$.Payload",
+                    "Parameters": {
+                      "Payload.$": "$",
+                      "FunctionName": "arn:aws:lambda:ap-south-1:654654461052:function:Extract-Bank-Data:$LATEST"
+                    },
+                    "Retry": [
+                      {
+                        "ErrorEquals": [
+                          "Lambda.ServiceException",
+                          "Lambda.AWSLambdaException",
+                          "Lambda.SdkClientException",
+                          "Lambda.TooManyRequestsException"
+                        ],
+                        "IntervalSeconds": 1,
+                        "MaxAttempts": 3,
+                        "BackoffRate": 2
+                      }
+                    ],
+                    "End": true
+                  }
+                }
+              },
+              "ItemReader": {
+                "Resource": "arn:aws:states:::s3:getObject",
+                "ReaderConfig": {
+                  "InputType": "CSV",
+                  "CSVHeaderLocation": "FIRST_ROW"
+                },
+                "Parameters": {
+                  "Bucket": "niranjan-ftp-location",
+                  "Key": "ftp-location/Sample_Bank_Transaction_Data.csv"
+                }
+              },
+              "MaxConcurrency": 1000,
+              "Label": "Bank-File-Processing",
+              "End": true
+            }
+          }
+        }
+      ],
+      "Next": "Transform-Data"
+    },
+    "Transform-Data": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "OutputPath": "$.Payload",
+      "Parameters": {
+        "Payload.$": "$",
+        "FunctionName": "arn:aws:lambda:ap-south-1:654654461052:function:Transform-Data:$LATEST"
+      },
+      "Retry": [
+        {
+          "ErrorEquals": [
+            "Lambda.ServiceException",
+            "Lambda.AWSLambdaException",
+            "Lambda.SdkClientException",
+            "Lambda.TooManyRequestsException"
+          ],
+          "IntervalSeconds": 1,
+          "MaxAttempts": 3,
+          "BackoffRate": 2
+        }
+      ],
+      "Next": "If Fraud Happened"
+    },
+    "If Fraud Happened": {
+      "Type": "Choice",
+      "Choices": [
+        {
+          "Variable": "$.fraud",
+          "StringEquals": "true",
+          "Next": "SNS Publish"
+        }
+      ],
+      "Default": "All is well"
+    },
+    "SNS Publish": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::sns:publish",
+      "Parameters": {
+        "Message.$": "$",
+        "TopicArn": "arn:aws:sns:ap-south-1:654654461052:Niranjan-CW-Alarms"
+      },
+      "End": true
+    },
+    "All is well": {
+      "Type": "Succeed"
+    }
+  }
+}
