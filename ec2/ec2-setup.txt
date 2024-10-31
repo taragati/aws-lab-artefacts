@@ -4,6 +4,7 @@ if pids=$(sudo lsof -i:8080 -t); then
     sudo kill $pids
 fi
 sudo dnf update
-sudo dnf install java-17-amazon-corretto-devel -y
-sudo wget https://github.com/taragati/aws-lab-artefacts/raw/refs/heads/main/ec2/springboot-apis-1.0.jar
+aws s3 cp s3://myapis-software-bucket/java-17-amazon-corretto-headless-17.0.13.11-1.amzn2023.1.x86_64.rpm .
+yes y | sudo yum localinstall java-17-amazon-corretto-headless-17.0.13.11-1.amzn2023.1.x86_64.rpm
+aws s3 cp s3://myapis-software-bucket/springboot-apis-1.0.jar .
 sudo java -jar springboot-apis-1.0.jar -Dversion=v1 &
