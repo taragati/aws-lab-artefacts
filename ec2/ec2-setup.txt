@@ -7,4 +7,4 @@ sudo dnf update
 aws s3 cp s3://myapis-software-bucket/java-17-amazon-corretto-headless-17.0.13.11-1.amzn2023.1.x86_64.rpm .
 yes y | sudo yum localinstall java-17-amazon-corretto-headless-17.0.13.11-1.amzn2023.1.x86_64.rpm
 aws s3 cp s3://myapis-software-bucket/springboot-apis-1.0.jar .
-sudo java -jar springboot-apis-1.0.jar -Dversion=v1 &
+sudo java -jar -Dversion=v1 springboot-apis-1.0.jar &
