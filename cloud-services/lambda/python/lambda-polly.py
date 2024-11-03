@@ -5,7 +5,7 @@ from contextlib import closing
 
 def lambda_handler(event, context):
     s3 = boto3.client('s3')
-    bucket_name = 'polly-data-niranjan'
+    bucket_name = 'my-polly-data-niranjan'
 
     if 'http' in event['requestContext']:
         method = event['requestContext']['http']['method']
@@ -48,7 +48,7 @@ def lambda_handler(event, context):
 
         s3.upload_file('/tmp/' + body['filename'],bucket_name,body['filename'] + ".mp3")
 
-        response = {'success': true}
+        response = {'success': 'true'}
     else:
         response = {
             "statusCode": 405,
