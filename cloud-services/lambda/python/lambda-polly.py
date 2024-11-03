@@ -32,7 +32,7 @@ def lambda_handler(event, context):
             # ensure the close method of the stream object will be called automatically
             # at the end of the with statement's scope.
             with closing(response["AudioStream"]) as stream:
-                output = os.path.join('/tmp', "speech.mp3")
+                output = os.path.join('/tmp', body['filename'])
                 try:
                     # Open a file for writing the output as a binary stream
                     with open(output, "wb") as file:
