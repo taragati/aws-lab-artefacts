@@ -33,15 +33,15 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://13.234.111.2:8080/apis/countries",
+									"raw": "http://myapis-alb-1473270375.ap-south-1.elb.amazonaws.com/apis/countries",
 									"protocol": "http",
 									"host": [
-										"13",
-										"234",
-										"111",
-										"2"
+										"myapis-alb-1473270375",
+										"ap-south-1",
+										"elb",
+										"amazonaws",
+										"com"
 									],
-									"port": "8080",
 									"path": [
 										"apis",
 										"countries"
@@ -115,21 +115,27 @@
 							"name": "resource",
 							"request": {
 								"method": "GET",
-								"header": [],
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "MB6kBjpeV13EGYkF92JoD6THtUVdspKI3tpbL9Do",
+										"type": "text"
+									}
+								],
 								"url": {
-									"raw": "https://2sieayiow5fbuqlvfkbtnojq5e0jmcoi.lambda-url.ap-south-1.on.aws/apis/resource/9658dc74-c6f2-41f8-91a2-efa38013fa4f",
+									"raw": "https://69s9xajbsa.execute-api.ap-south-1.amazonaws.com/api/resource/825282ba-5eca-429a-9c85-d4ad89ec9ca8",
 									"protocol": "https",
 									"host": [
-										"2sieayiow5fbuqlvfkbtnojq5e0jmcoi",
-										"lambda-url",
+										"69s9xajbsa",
+										"execute-api",
 										"ap-south-1",
-										"on",
-										"aws"
+										"amazonaws",
+										"com"
 									],
 									"path": [
-										"apis",
+										"api",
 										"resource",
-										"9658dc74-c6f2-41f8-91a2-efa38013fa4f"
+										"825282ba-5eca-429a-9c85-d4ad89ec9ca8"
 									]
 								}
 							},
@@ -155,10 +161,10 @@
 									}
 								},
 								"url": {
-									"raw": "https://5fztsnivvlq6yjwv2mohchri6i0kvyvl.lambda-url.ap-south-1.on.aws/apis/resource",
+									"raw": "https://pv5jx6vmhqtqzlpwpavxge47hy0cnaae.lambda-url.ap-south-1.on.aws/apis/resource",
 									"protocol": "https",
 									"host": [
-										"5fztsnivvlq6yjwv2mohchri6i0kvyvl",
+										"pv5jx6vmhqtqzlpwpavxge47hy0cnaae",
 										"lambda-url",
 										"ap-south-1",
 										"on",
@@ -178,10 +184,10 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "https://vrywsv6maprlbz7tstjno2ehg40mwrdk.lambda-url.ap-south-1.on.aws/apis/resource/8d53eedc-2c91-45d7-bd43-301a3b1773ae",
+									"raw": "https://pv5jx6vmhqtqzlpwpavxge47hy0cnaae.lambda-url.ap-south-1.on.aws/apis/resource/35ff7f1f-c95f-4bc1-9f4c-52eef6a2c41e",
 									"protocol": "https",
 									"host": [
-										"vrywsv6maprlbz7tstjno2ehg40mwrdk",
+										"pv5jx6vmhqtqzlpwpavxge47hy0cnaae",
 										"lambda-url",
 										"ap-south-1",
 										"on",
@@ -190,7 +196,67 @@
 									"path": [
 										"apis",
 										"resource",
-										"8d53eedc-2c91-45d7-bd43-301a3b1773ae"
+										"35ff7f1f-c95f-4bc1-9f4c-52eef6a2c41e"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "metadata",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://pv5jx6vmhqtqzlpwpavxge47hy0cnaae.lambda-url.ap-south-1.on.aws/apis/metadata/35ff7f1f-c95f-4bc1-9f4c-52eef6a2c41e",
+									"protocol": "https",
+									"host": [
+										"pv5jx6vmhqtqzlpwpavxge47hy0cnaae",
+										"lambda-url",
+										"ap-south-1",
+										"on",
+										"aws"
+									],
+									"path": [
+										"apis",
+										"metadata",
+										"35ff7f1f-c95f-4bc1-9f4c-52eef6a2c41e"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "lambda-polly",
+					"item": [
+						{
+							"name": "speak",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"text\":\"Hello Niranjan\",\n    \"filename\":\"hello\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://lxfj2xhfrjlwxldvaqfhlhoi6u0ymchx.lambda-url.ap-south-1.on.aws/speak",
+									"protocol": "https",
+									"host": [
+										"lxfj2xhfrjlwxldvaqfhlhoi6u0ymchx",
+										"lambda-url",
+										"ap-south-1",
+										"on",
+										"aws"
+									],
+									"path": [
+										"speak"
 									]
 								}
 							},
