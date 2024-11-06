@@ -2,6 +2,9 @@
 # Local .terraform directories
 **/.terraform/*
 
+# Python3 venv
+**/venv
+
 # .tfstate files
 *.tfstate
 *.tfstate.*
