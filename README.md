@@ -1,6 +1,6 @@
 # aws-lab-artefacts
 
-Youtube Videos:
+AWS Learning Videos:
 --------------
 1. AWS Cloud Solutions - ZERO Downtime with Blue-Green & Canary Deployment of Real Time APIs:<br/> https://www.youtube.com/watch?v=AugqUYGzE7E
 
