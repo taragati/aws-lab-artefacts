@@ -1,0 +1,200 @@
+openapi: 3.0.3
+info:
+  title: Person - OpenAPI 3.0
+  description: >-
+    This is swagger spec for example APIs
+  version: 0.0.3
+servers:
+  - url: https://api.example.com/api/v1
+tags:
+  - name: CORS
+    description: CORS - API
+  - name: Person
+    description: >-
+      Person APIs
+paths:
+  /resource:
+    options:
+      tags:
+        - CORS
+      responses:
+        '200':
+          description: 200 response
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+            Access-Control-Allow-Methods:
+              schema:
+                type: string
+            Access-Control-Allow-Headers:
+              schema:
+                type: string
+          content: {}
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: '200'
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: '''OPTIONS,POST'''
+              method.response.header.Access-Control-Allow-Headers: >-
+                'Content-Type,X-Requested-With,X-Amz-Date,Authorization,X-Api-Key,X-Session-GUID'
+              method.response.header.Access-Control-Allow-Origin: '''*'''
+            responseTemplates:
+              application/json: |
+                {}
+        requestTemplates:
+          application/json: |
+            {
+              "statusCode" : 200
+            }
+        passthroughBehavior: when_no_match
+        type: mock
+    post:
+      tags:
+        - Person
+      summary: Create Person
+      description: Create Person details
+      operationId: createPerson
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Person'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/APIResponse'
+        '405':
+          description: Invalid input
+  /resource/{id}:
+    options:
+      tags:
+        - CORS
+      responses:
+        '200':
+          description: 200 response
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+            Access-Control-Allow-Methods:
+              schema:
+                type: string
+            Access-Control-Allow-Headers:
+              schema:
+                type: string
+          content: { }
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: '200'
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: '''OPTIONS,GET'''
+              method.response.header.Access-Control-Allow-Headers: >-
+                'Content-Type,X-Requested-With,X-Amz-Date,Authorization,X-Api-Key,X-Session-GUID'
+              method.response.header.Access-Control-Allow-Origin: '''*'''
+            responseTemplates:
+              application/json: |
+                {}
+        requestTemplates:
+          application/json: |
+            {
+              "statusCode" : 200
+            }
+        passthroughBehavior: when_no_match
+        type: mock
+    get:
+      tags:
+        - Person
+      summary: Get person
+      description: Get person details
+      operationId: getPerson
+      parameters:
+        - name: id
+          in: path
+          description: ID of resource
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Person'
+        '405':
+          description: Invalid input
+components:
+  schemas:
+    Person:
+      required:
+        - code
+        - msg
+      type: object
+      properties:
+        id:
+          type: string
+          minLength: 10
+          maxLength: 40
+          description: Unique id for this model
+        role:
+          type: string
+          minLength: 5
+          maxLength: 20
+          description: Role
+          example: 'Admin'
+        title:
+          type: string
+          minLength: 3
+          maxLength: 40
+          description: Mobile
+          example: 'John Doe'
+    Error:
+      required:
+        - code
+        - msg
+      type: object
+      properties:
+        code:
+          type: string
+          minLength: 3
+          maxLength: 3
+          description: Unique code of error
+          example: E101
+        rtry:
+          type: boolean
+          description: User can retry or not
+          example: true
+        msg:
+          type: string
+          minLength: 5
+          maxLength: 256
+          description: Error message of error
+          example: ''
+    APIResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          minLength: 10
+          maxLength: 20
+          description: Unique id
+        _links:
+          type: object
+          properties:
+            next:
+              type: object
+              properties:
+                href:
+                  type: string
+                  maxLength: 256
+                  description: Href url
+        errs:
+          type: array
+          items:
+            $ref: '#/components/schemas/Error'

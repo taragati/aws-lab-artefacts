@@ -1,5 +1,3 @@
-# aws-lab-artefacts
-
 AWS Learning Videos:
 --------------
 1. AWS Cloud Solutions - ZERO Downtime with Blue-Green & Canary Deployment of Real Time APIs:<br/> https://www.youtube.com/watch?v=AugqUYGzE7E
@@ -9,3 +7,4 @@ AWS Learning Videos:
 3. AWS Cloud Solutions - Real Time REST APIs with Provisioned Infrastructure - High Available & Scalable.<br/> https://www.youtube.com/watch?v=gqRvY1IKjyg&t=3s
 
 4. AWS Cloud Solutions - Real Time Serverless REST APIs - High Available & Scalable.<br/> https://www.youtube.com/watch?v=UtTe17whU-s
+

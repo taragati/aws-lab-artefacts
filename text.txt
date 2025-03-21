@@ -1,0 +1,17 @@
+TOP AWS Design Patters:
+
+AWS Cloud Solutions - ZERO Downtime with Blue-Green & Canary Deployment of Real Time APIs
+
+https://www.youtube.com/watch?v=AugqUYGzE7E
+
+AWS Cloud Solutions - Build Serverless Web Application On AWS
+
+https://www.youtube.com/watch?v=ysCaYIQ4Fz8
+
+AWS Cloud Solutions - Real Time REST APIs with Provisioned Infrastructure - High Available & Scalable.
+
+https://www.youtube.com/watch?v=gqRvY1IKjyg&t=3s
+
+AWS Cloud Solutions - Real Time Serverless REST APIs - High Available & Scalable.
+
+https://www.youtube.com/watch?v=UtTe17whU-s
