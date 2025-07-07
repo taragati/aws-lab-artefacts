@@ -4,17 +4,19 @@ from boto3.dynamodb.conditions import Key
 dynamodb = boto3.resource('dynamodb')
 s3_client = boto3.client('s3')
 
-def export_salesforce_data_to_txt(event, context):
+def lambda_handler(event, context):
     table_name = "Employee_Data"
     bucket_name = "niranjan-post-data"
-    output_key = 'salesforce_report.txt'
+    output_key = 'processed/salesforce_report.csv'
 
     table = dynamodb.Table(table_name)
 
     # Query for sort key = 'Salesforce' under a specific partition key (assuming 'pk')
     response = table.query(
-        KeyConditionExpression=Key('sort_key').eq('Salesforce')
+        IndexName="skill-index",
+        KeyConditionExpression=Key("skill").eq("Salesforce"),
     )
+
     items = response.get('Items', [])
 
     # Generate text content
@@ -30,5 +32,5 @@ def export_salesforce_data_to_txt(event, context):
         Bucket=bucket_name,
         Key=output_key,
         Body=report_content.encode('utf-8'),
-        ContentType='text/plain'
+        ContentType='text/csv'
     )
