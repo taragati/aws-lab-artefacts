@@ -1,0 +1,101 @@
+id,full_name,date_of_joining,country_code,mobile,department,years_of_experience,skill
+d89b8e98-4d60-4740-82e2-dc9bcb2db3c1,Jessica Eric Smith,2017-12-12,KE,7252853064,Support,11,Excel
+8adf6f6b-3073-4c34-aa97-8932278d1c70,Robert Tammy Nguyen,2023-12-18,CZ,2408559284,Engineering,17,Analytics
+14337545-b0bb-42b4-8e59-28e97100f3c0,Nathan William Gallagher,2022-01-07,AR,0567854905,Finance,13,Java
+e1ac1702-631e-455b-b131-c1686175011a,Veronica Carla Ross,2024-12-14,BS,6525368168,Support,4,SQL
+ff15b79b-9298-41da-a9e4-8bb33210ec6e,Martin John Williams,2018-06-14,AG,3081269993,Finance,4,Python
+ca953041-722b-4f4d-80ff-a04c5adbc764,Dawn Alicia Ferguson,2023-02-09,GH,0673159956,Support,2,Communication
+d1726099-5ee5-4109-beee-c5bf82da0857,Richard Felicia Navarro,2018-11-05,FR,6379221870,HR,7,Salesforce
+09691771-dcaf-48d9-a43e-db903ec25e91,Michelle Lauren Young,2023-07-15,BB,0612650213,IT,0,Communication
+082b8177-bf10-48a3-8498-afaae6d65170,Jamie Daniel Jones,2024-12-30,UA,3168577840,Support,22,Salesforce
+684a693f-d173-48d4-872c-33a5170ff08b,Maria Rachel Monroe,2020-11-04,PA,5429681897,Finance,24,SQL
+ce4cd7d5-bbcd-4a9b-81f7-d2c3bb0f4343,Cody Sara Rogers,2018-04-28,JP,1864470048,Marketing,15,Python
+4fa1e722-ab2d-43b8-bee4-94372edae0b3,Jose Mark Coleman,2021-07-28,KR,0582624784,Sales,3,Project Management
+d6833553-17e2-4b0b-9533-67ab90f63ca0,Ashley Andrew Washington,2017-06-27,GR,2455661494,IT,14,Analytics
+a95f2c71-2103-46ee-a98c-a8ddb6519844,Stephen Corey Woods,2019-06-07,PT,4672373958,Marketing,21,Salesforce
+0b3e335a-a591-46e8-8e92-5b5990637eab,Michelle Sue Williams,2016-02-13,WS,0818625811,Engineering,20,SQL
+041093bb-8cef-4694-9274-59eb2d2f43f4,Kristen Lisa Noble,2019-01-21,ER,3920720693,HR,3,Python
+9a651d68-0652-4b9e-abba-8b462ed6fc7c,Jacob Amanda Madden,2020-09-02,MR,2847661426,Sales,13,Salesforce
+3868cc3c-adac-4c55-bb40-eb88b4775c9b,Michael Andre Wood,2022-11-28,GB,9139014438,Marketing,1,Salesforce
+c459e711-6c4a-4276-8f60-7caaa4f612c8,Allison David Marshall,2020-06-17,AM,3580425731,Engineering,2,Salesforce
+3d14f74d-2f1d-4e38-98fb-ea94120f4d20,Justin Ricardo Butler,2022-04-10,GE,7415692221,Marketing,12,Communication
+4396d269-d334-492e-a58e-952173bf3556,Daniel Ashley Beltran,2022-05-19,AT,7751690077,IT,19,Excel
+184beb93-8947-4bbd-b3a2-c78672ca3c7b,Tiffany Lindsay Strong,2022-11-25,BD,4178858783,Support,15,Analytics
+3d81a85d-dc39-4f21-b2cd-8383f5cdf33d,Brandon Nicole Hawkins,2024-05-18,AZ,2121895953,Finance,16,Project Management
+f19cd199-6797-408a-b3fe-abd267a63501,Aaron Shelly Smith,2016-10-29,BE,6608522708,Sales,1,Project Management
+2ccccbe5-ad60-4105-97c6-3a064da50c96,Harry Brent King,2023-05-27,PW,6497754033,Support,15,SQL
+f477cc82-252e-44c0-b500-d58cd7d2003a,Ana Donna Peterson,2024-09-07,BN,6707906482,Support,3,Python
+b0f3a6fe-7894-4c14-b1ea-65a90183aa2d,Victoria Angela Castillo,2015-09-02,IN,7254516840,Sales,0,Project Management
+44c65d85-8048-4bf3-b539-a606d4d4bfe4,Jennifer Anthony Mason,2024-04-06,AO,2467660958,Marketing,26,Excel
+fd0fa4de-9401-4470-b680-8216b16d7a19,Breanna Kenneth Warren,2015-10-21,HN,4190972581,Support,26,Python
+3d942a93-7251-4640-8b16-b7c9b3756c3e,Jennifer Amy Marshall,2021-02-17,BO,2365054527,IT,6,Project Management
+f9376bbd-ee4e-4b62-994c-c94c92e11283,Nathan Mark Jackson,2025-05-05,KN,6115249351,Sales,12,SQL
+7a34c3ad-a198-4715-8fec-b886e6931627,Jessica Angela Gonzales,2017-10-23,AL,4911930976,Sales,10,Salesforce
+22acde45-f323-4ac1-95dc-f256741f5378,Wendy Jeremy Bennett,2023-11-29,NI,1206340722,Marketing,23,Communication
+07d088a4-dbf8-4a9f-92d2-9dffb8e6e93a,Sarah Brenda Yang,2023-12-12,BW,8723846240,Sales,28,Project Management
+c61b2bd9-3cdc-4d64-8c7f-e7d4e417a351,Lori Kelli Harper,2022-06-15,RW,3020756686,Sales,12,Salesforce
+c0dc3e54-7e6d-4966-922f-0d8ff91197c9,Kelsey Richard Foster,2024-12-27,LK,3505019376,Support,5,Analytics
+1f80db63-7d7d-4236-9ee3-87855f52de48,Angela Jennifer Bell,2019-07-24,MZ,7972076192,HR,12,Project Management
+aceb7309-b14a-4cc6-921b-a6bac12a4e01,Ashley Wyatt Ewing,2022-01-05,LC,8307916159,HR,27,Salesforce
+cd149df2-c68f-4b47-ae45-808a23978674,Holly Andrea Gomez,2017-10-30,SO,6827143911,Support,2,SQL
+9a032333-5cff-4592-ac51-97db53662fe5,David Cynthia Chavez,2021-12-12,NG,8894332686,Marketing,4,Python
+ca668755-11bd-4ff2-8856-577d2ec19acf,Melanie Julie Powers,2015-09-20,GW,2155050755,Sales,12,Salesforce
+65f73f84-4fb9-4712-802d-0131064b7a68,Jaime Linda Cooley,2016-03-18,IN,9253846149,Sales,0,SQL
+79fe90ac-bb14-428b-80cd-d3729bd91ea0,Allison Tiffany Cardenas,2022-09-21,SK,3389008131,Sales,5,Excel
+cb079a1e-e46f-4b5c-8be5-5e916f8017a6,Michael Todd Anderson,2021-10-07,UA,9013883971,Support,11,SQL
+af33ed3c-25f8-4be2-829e-d779f5338c5d,Susan Scott Ross,2020-10-18,TG,2845748797,Finance,30,Salesforce
+c002a5db-5b63-402d-a40e-9f2ad994efe8,Spencer Heather Parsons,2018-12-31,RU,5521679344,HR,9,Java
+ddc0dbd9-d8ed-4e38-a028-e5ebdeba5922,Cynthia Thomas Grant,2023-07-02,GD,5428390525,Engineering,3,Excel
+cf33cc2a-af04-4852-aac9-c2b705b4807e,Craig Matthew Yang,2020-03-20,HU,3854402338,Finance,13,SQL
+1dd4008a-7b0b-4bb2-a10e-5d62daf5ed05,Amy Victor Brown,2020-08-01,ZM,6561015881,Sales,8,Java
+bc91a83f-0bc0-4b10-87f3-d1414236d702,Bradley Andrea Allen,2025-06-30,NE,0514812256,Finance,14,Analytics
+f99a6504-4225-4af4-81e8-c7fad4b3dfa4,Julia Jason Le,2019-01-14,RS,1034493811,Marketing,7,Salesforce
+20e0870e-f312-452e-b566-c8cb25bc1a36,Kevin Jennifer Navarro,2022-04-04,KP,6379648414,Support,17,Excel
+d4c6daea-5f59-4a60-aed4-fd8ad62b3845,Kelsey James Green,2015-09-04,UY,3341749867,IT,1,Analytics
+481ee40d-2779-4e25-9213-2eb9c3a30e96,Brian Rachael Cain,2021-07-29,MR,0391388422,Engineering,29,Python
+09fb0dc1-6d4b-4cf7-8206-5e186316e1c1,John Wendy Powell,2015-07-06,BG,5003481585,HR,1,Communication
+22a5f2d1-a69d-42a2-801b-1fc6c742fc47,Joseph Hannah Rodriguez,2023-06-25,CR,4402926347,IT,15,Project Management
+e3288865-95a6-425e-8d72-b6f194703316,Martha William Rivera,2018-12-11,ID,9384179429,Sales,13,Excel
+f30f44d5-853c-46c4-8bca-cec5d659794b,Melissa Jennifer Walker,2015-10-20,PK,2918122352,Sales,17,Python
+ce5d1983-b13c-40d7-98e5-785d04a5b71f,Patrick Samuel Martin,2023-08-09,KI,8749833921,Engineering,13,Excel
+476a7b3c-73ee-494f-9175-ec575ddcf29f,Hannah David Wade,2024-12-25,ER,7130441478,Engineering,24,Analytics
+1fbf4537-1b60-4295-96aa-821ef6ea5575,Kimberly Lisa Donaldson,2022-11-22,TL,6248548226,Sales,2,Analytics
+b9cb84fd-0923-451a-ad6a-d6a39958d884,Jennifer Brenda Vaughan,2025-05-07,BB,1436066964,Marketing,24,Communication
+cc1b0122-94e5-403f-bc6e-08e8560b98e6,Mary Madeline Davis,2016-01-14,LB,6467077007,Marketing,6,Project Management
+4cd26195-06cc-4220-9d35-7d684b27a067,Christopher Toni Rivera,2018-11-29,SG,5124244163,Engineering,16,SQL
+940a2969-9da6-4b39-ab18-4b34fc38ba2d,Debbie Brittany Patterson,2017-10-03,LB,7029838647,HR,26,Communication
+9ed2f027-1838-44d0-9199-f7ae2a29d435,Taylor Mary Stone,2023-07-22,PT,0906600946,Engineering,22,Analytics
+d53859d0-1a5b-44df-a37a-1efb693aaeea,Christopher Jacob Leon,2018-09-22,PH,6525983497,Marketing,13,Salesforce
+7c63509f-007e-4188-b65d-81123d37825c,Kelly Joshua Graham,2015-11-12,AE,5494631858,Marketing,15,Salesforce
+06d8e2a9-56cb-4326-ac9b-fd09d03524e4,Corey Kimberly Russell,2016-04-03,CR,6041689534,Engineering,4,Project Management
+4153741c-2fd9-4d2e-9103-7436b5f00b1b,Brian Larry Bolton,2017-05-08,KG,8915384596,Support,7,SQL
+64070676-834c-44ae-aa43-5d32493efb23,Amy Kathryn Ramirez,2023-12-02,PE,5674473992,HR,0,Communication
+15322e30-a1ae-4996-bd26-5390cd986603,Ariana Randy White,2022-03-17,TO,1256582264,Marketing,27,Analytics
+8035f6f1-8ba6-4f9e-be69-c200c1189d9b,Rachel Jessica Hardy,2017-02-27,AT,2244520111,Sales,30,Analytics
+9c4f2903-96c1-45c2-9176-6db41d857548,Bryan Cheryl Miles,2018-01-04,RU,7779477728,Marketing,6,Java
+16cddaec-ae42-449d-a00a-7af557093cb0,Joel Jordan Stein,2021-10-04,SE,1870561997,Engineering,23,SQL
+49bc7476-130a-46af-96f6-28a04a55566a,Jeffrey Denise Bradshaw,2015-07-13,PK,0463626341,HR,0,Python
+292ba15e-811f-41a2-bbe9-58321f2aeb25,Tasha Alicia Hunt,2019-04-13,PT,5217292368,Sales,0,Python
+371e66d6-fb41-409f-a112-6c9f377ab720,Bryan David Peterson,2021-12-30,TW,2606371047,Engineering,18,Analytics
+8560a8b5-f2ef-4baa-bc0e-428bc96d60d7,Brian Allison Woods,2017-07-13,KW,9246166255,Sales,10,Java
+c9d7321c-2940-464f-9bbc-33e0968d226f,Matthew Jasmine Rodriguez,2020-06-08,PE,0398008940,HR,24,Project Management
+5e3d4648-0e09-448c-8d6d-eb8412199254,Christina Dustin Mathews,2017-10-29,AZ,6868121306,Finance,19,SQL
+05456dc9-d937-4ab2-8dac-7485538783fa,Christine Gavin Thomas,2018-05-10,MA,0228824941,Finance,26,Python
+65aedf2b-7471-495d-9646-d2b3df4ef227,William Samuel Romero,2021-05-29,IR,8719491435,Marketing,27,Analytics
+dda0ebc8-03f4-4ccd-b8b3-ac86c3804fe7,Diana Anthony Harvey,2018-06-01,SG,0175492328,Sales,5,SQL
+1a79d09e-e3d2-4755-bd17-4c3e1cdc7495,Kevin John Flores,2017-01-18,MW,3665433714,Sales,12,Salesforce
+a8f9b7c2-0708-4897-be84-18dbb3cc833c,Parker Charles Harvey,2016-06-13,CU,3370731232,IT,1,Salesforce
+3b3af19f-80d1-4325-aadc-d12dbca29657,Jesse Sean Jones,2016-08-02,IQ,5085134714,Sales,27,Project Management
+501d4f62-cc75-46ef-86d3-849c203208f9,Christopher Mary Soto,2025-03-28,VE,4669190886,IT,30,Java
+023e0bfa-8499-47d6-a82a-02e3460368db,Katherine Jonathan Alexander,2016-01-26,MK,9547024228,Marketing,24,Salesforce
+3ebc8148-0dae-4fc5-b030-e9bf7fda1c27,Kathy Kristen Murphy,2015-10-21,TZ,4603691406,HR,19,Analytics
+9afc60e7-9b5e-4d5d-a42b-2468563cc3bd,Jennifer Vanessa Huff,2016-08-05,LS,9993620200,Support,14,Java
+c6b187b5-1d12-4367-a144-a7176c84f1f2,Jeffrey William Meyer,2020-05-13,KG,9694598968,Engineering,29,Analytics
+86e2d38b-c770-4f14-a24f-162c6f2694fe,Michael Austin Bowman,2021-09-23,IS,8743591665,HR,14,Java
+69c22e25-7cb4-4816-9c57-055298fce463,Wendy Patricia Underwood,2023-07-04,FJ,2991287246,Support,30,Excel
+4028247c-6f81-40b9-bed7-66e8420cb77e,Christopher Kelsey Brown,2022-03-05,BE,9160681013,Engineering,1,Project Management
+e0724c0b-382a-4456-b23e-fccfae0e8355,Jessica Jessica Adams,2021-10-11,GY,4004531624,Support,5,Project Management
+4bd41d00-d8d3-4139-91b4-7340fd4a2ec0,Antonio Ashley Martinez,2015-08-06,EE,4849684515,Sales,30,Salesforce
+c8269379-15d5-423e-af91-7b25ad1f1d85,David Shaun Cook,2021-09-30,JP,9767389308,HR,8,Salesforce
+93865be9-dd0f-4965-89bf-70075d8e3ce0,Christine Marie Ellis,2022-11-05,FR,8187068145,Marketing,3,Salesforce
+6c983859-0fb5-46b4-9bd8-7214b20ff91c,Andrew Samuel Oliver,2021-09-09,TV,2524497782,Support,15,Java

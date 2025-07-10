@@ -1,0 +1,47 @@
+{
+  "TableName": "employee_data",
+  "TablePath": "/",
+  "TableOwner": "postgres",
+  "Columns": [
+    {
+      "ColumnName": "id",
+      "ColumnType": "string",
+      "Nullable": true
+    },
+    {
+      "ColumnName": "full_name",
+      "ColumnType": "string",
+      "Nullable": true
+    },
+    {
+      "ColumnName": "date_of_joining",
+      "ColumnType": "date",
+      "Nullable": true
+    },
+    {
+      "ColumnName": "country_code",
+      "ColumnType": "string",
+      "Nullable": true
+    },
+    {
+      "ColumnName": "mobile",
+      "ColumnType": "string",
+      "Nullable": true
+    },
+    {
+      "ColumnName": "department",
+      "ColumnType": "string",
+      "Nullable": true
+    },
+    {
+      "ColumnName": "years_of_experience",
+      "ColumnType": "int",
+      "Nullable": true
+    },
+    {
+      "ColumnName": "skill",
+      "ColumnType": "string",
+      "Nullable": true
+    }
+  ]
+}
