@@ -1,5 +1,11 @@
 # Create S3 Bucket
 aws s3api create-bucket --bucket <name> --region us-east-1
 
+aws s3api create-bucket --bucket <name> --region ap-south-1 --no-verify-ssl --create-bucket-configuration LocationConstraint=ap-south-1
+
+
 # Upload S3 Content
 aws s3 cp ./v1-build s3://<name>/ --recursive
+
+# Invalidate cloud front cache
+aws cloudfront create-invalidation --distribution-id YOUR_DISTRIBUTION_ID --paths "/*"
