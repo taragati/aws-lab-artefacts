@@ -1,0 +1,2 @@
+# https://react.dev/learn/creating-a-react-app
+npx create-next-app@latest

@@ -1,0 +1,5 @@
+# Create S3 Bucket
+aws s3api create-bucket --bucket <name> --region us-east-1
+
+# Upload S3 Content
+aws s3 cp ./v1-build s3://<name>/ --recursive
