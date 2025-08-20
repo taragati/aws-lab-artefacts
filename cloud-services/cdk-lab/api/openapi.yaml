@@ -1,0 +1,16 @@
+openapi: 3.0.1
+info:
+  title: Items API
+  version: "1.0"
+paths:
+  /items:
+    get:
+      summary: Get items
+      responses:
+        "200":
+          description: Successful response
+    post:
+      summary: Create item
+      responses:
+        "200":
+          description: Item created
