@@ -12,7 +12,8 @@ def lambda_handler(event, context):
 
     # Simulate a batch job status for the lab.
     # Occasionally generate a failure so the CloudWatch alarm can be tested.
-    success = random.random() > 0.8
+    # 0.1 is high occurance
+    success = random.random() > 0.1
 
     if success:
         status = "SUCCESS"
