@@ -1,6 +1,7 @@
 swagger: "2.0"
+
 info:
-  title: CloudWatch API Lab
+  title: CloudWatch API Gateway Lab
   version: "1.0"
 
 schemes:
@@ -12,24 +13,22 @@ paths:
     get:
       produces:
         - application/json
-      x-amazon-apigateway-integration:
-        type: AWS_PROXY
-        httpMethod: POST
-        uri:
-          Fn::Sub: arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${HelloLambdaArn}/invocations
       responses:
         "200":
-          description: OK
+          description: Successful response
 
   /error:
     get:
       produces:
         - application/json
-      x-amazon-apigateway-integration:
-        type: AWS_PROXY
-        httpMethod: POST
-        uri:
-          Fn::Sub: arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${HelloLambdaArn}/invocations
       responses:
         "500":
-          description: Internal Server Error
+          description: Simulated server error
+
+  /test:
+    get:
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: Successful response
