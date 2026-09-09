@@ -35,6 +35,6 @@ def lambda_handler(event, context):
         },
         "body": json.dumps({
             "status": "SUCCESS",
-            "item": item
+            "message": "DynamoDB operation completed"
         })
     }
