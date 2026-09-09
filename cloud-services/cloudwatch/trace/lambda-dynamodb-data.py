@@ -8,7 +8,7 @@ table = dynamodb.Table("cloudwatch-tracing-lab")
 
 def lambda_handler(event, context):
 
-    item_id = str(event.get("id", "1"))if event.get("queryStringParameters", {}).get("error") == "true":
+    if event.get("queryStringParameters", {}).get("error") == "true":
         raise Exception("Simulated tracing lab failure")
 
     item_id = str(
