@@ -1,11 +1,14 @@
 import json
 import boto3
+import logging
 
 client = boto3.client('ses')
 
 def lambda_handler(event, context):
 
     request_id = event.get("requestId")
+    logger = logging.getLogger()
+    logger.setLevel(logging.INFO)
 
     logger.info(json.dumps({
         "requestId": request_id
