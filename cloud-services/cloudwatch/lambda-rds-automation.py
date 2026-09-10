@@ -218,6 +218,17 @@ def lambda_handler(event, context):
     # ---------------------------------------------------------
     # EventBridge Scheduler
     # ---------------------------------------------------------
+    if source == "aws.rds":
+        logger.info("Handling RDS Event Change")
+        handle_scheduler_event(event)
+        return {
+            "statusCode": 200,
+            "message": "Scheduler event handled"
+        }
+
+    # ---------------------------------------------------------
+    # EventBridge Scheduler
+    # ---------------------------------------------------------
     if source == "aws.scheduler":
         logger.info("Handling EventBridge Scheduler event")
         handle_scheduler_event(event)
