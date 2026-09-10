@@ -5,6 +5,12 @@ client = boto3.client('ses')
 
 def lambda_handler(event, context):
 
+    request_id = event.get("requestId")
+
+    logger.info(json.dumps({
+        "requestId": request_id
+    }))
+    
     response = client.send_email(
         Destination={
             'ToAddresses': ['sample@email.com']
